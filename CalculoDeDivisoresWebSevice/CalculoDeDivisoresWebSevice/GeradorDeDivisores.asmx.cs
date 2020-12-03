@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CalculoDeDivisores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,9 +19,15 @@ namespace CalculoDeDivisoresWebSevice
 	{
 
 		[WebMethod]
-		public string HelloWorld()
+		public int[] ObterDivisoresDeUmNumero(int numero)
 		{
-			return "Hello World";
+			return GeracaoDeDivisoresUtil.ObterDivisoresDoNumero(numero, apenasDivisoresPrimos:false).ToArray();
+		}
+
+		[WebMethod]
+		public int[] ObterDivisoresPrimosDeUmNumero(int numero)
+		{
+			return GeracaoDeDivisoresUtil.ObterDivisoresDoNumero(numero, apenasDivisoresPrimos: true).ToArray();
 		}
 	}
 }

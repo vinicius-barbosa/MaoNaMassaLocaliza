@@ -16,7 +16,7 @@ namespace CalculoDeDivisores
 
 			if(apenasDivisoresPrimos)
 			{
-				return divisoresPrimos;
+				return divisoresPrimos.Distinct().ToList();
 			}
 			else
 			{
