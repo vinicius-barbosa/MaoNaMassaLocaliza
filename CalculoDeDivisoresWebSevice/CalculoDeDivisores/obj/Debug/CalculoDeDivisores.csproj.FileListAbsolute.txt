@@ -1,0 +1,5 @@
+D:\Projetos\MaoNaMassaLocaliza\CalculoDeDivisoresWebSevice\CalculoDeDivisores\bin\Debug\CalculoDeDivisores.dll
+D:\Projetos\MaoNaMassaLocaliza\CalculoDeDivisoresWebSevice\CalculoDeDivisores\bin\Debug\CalculoDeDivisores.pdb
+D:\Projetos\MaoNaMassaLocaliza\CalculoDeDivisoresWebSevice\CalculoDeDivisores\obj\Debug\CalculoDeDivisores.csprojAssemblyReference.cache
+D:\Projetos\MaoNaMassaLocaliza\CalculoDeDivisoresWebSevice\CalculoDeDivisores\obj\Debug\CalculoDeDivisores.dll
+D:\Projetos\MaoNaMassaLocaliza\CalculoDeDivisoresWebSevice\CalculoDeDivisores\obj\Debug\CalculoDeDivisores.pdb
