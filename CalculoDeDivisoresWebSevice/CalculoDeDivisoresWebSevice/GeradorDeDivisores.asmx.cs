@@ -54,11 +54,11 @@ namespace CalculoDeDivisoresWebSevice
 		}
 
 		private void ValidarPreenchimentoDaRequisicao(int? numero)
-		{
-			bool preenchimentoValido = (numero.HasValue && (numero >= 2));
+		{   
+			bool preenchimentoValido = (numero.HasValue && (numero >= 2) && (numero <= 1998000000));
 
 			if (!preenchimentoValido)
-				throw new Exception("O usuário deverá informar um número inteiro positivo a partir de 2.");
+				throw new Exception("Favor inserir um número inteiro positivo a partir de 2 e menor que 1998000000.");
 		}
 
 		private int? TratarNumeroPreenchido(string numeroPreenchido)

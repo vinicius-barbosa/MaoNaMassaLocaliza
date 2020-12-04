@@ -7,7 +7,9 @@
 			return textoNaoTratado
 					.Replace("\n", string.Empty)
 					.Replace("\r", string.Empty)
-					.Replace("\t", string.Empty);
+					.Replace("\t", string.Empty)
+					.Replace("]", string.Empty)
+					.Replace("[", string.Empty);
 		}
 	}
 }

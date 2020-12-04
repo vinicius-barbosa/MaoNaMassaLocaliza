@@ -52,10 +52,10 @@ namespace CalculoDeDivisoresClient
 
 		private void ValidarPreenchimentoDoFormulario()
 		{
-			bool preenchimentoValido = (Numero.HasValue && (Numero >= 2));
+			bool preenchimentoValido = (Numero.HasValue && (Numero >= 2) && (Numero <= 1998000000));
 
 			if (!preenchimentoValido)
-				throw new Exception("Favor inserir um número inteiro positivo a partir de 2.");
+				throw new Exception("Favor inserir um número inteiro positivo a partir de 2 e menor que 1998000000.");
 		}
 
 		private void LimparControles()
