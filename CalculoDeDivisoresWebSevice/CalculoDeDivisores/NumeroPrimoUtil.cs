@@ -6,17 +6,13 @@ namespace CalculoDeDivisores
 	{
 		public static bool NumeroEhPrimo(int numero, int divisorParaRecursividade)
 		{
-			if (Array.IndexOf(new int[] { 0, 1 }, numero) >= 0)
+			if (NumeroNaoEhPrimo(numero) || EhDivisivelPorAlgumDosDivisores(numero, 2, 3, 5))
 			{
 				return false;
 			}
 			else if (Array.IndexOf(new int[] { 2, 3, 5, 7 }, numero) >= 0)
 			{
 				return true;
-			}
-			else if (EhDivisivelPorAlgumDosDivisores(numero, 2, 3, 5))
-			{
-				return false;
 			}
 			else
 			{
@@ -38,6 +34,11 @@ namespace CalculoDeDivisores
 					}
 				}
 			}
+		}
+
+		private static bool NumeroNaoEhPrimo(int numero)
+		{
+			return Array.IndexOf(new int[] { 0, 1 }, numero) >= 0;
 		}
 
 		public static bool EhDivisivelPorAlgumDosDivisores(int numero, params int[] divisores)
