@@ -32,11 +32,11 @@
 			this.txtNumero = new System.Windows.Forms.TextBox();
 			this.cbxListarSomentePrimos = new System.Windows.Forms.CheckBox();
 			this.btnCalcular = new System.Windows.Forms.Button();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.gbxListaDivisores = new System.Windows.Forms.GroupBox();
 			this.lbxDivisores = new System.Windows.Forms.ListBox();
 			this.lblTotalDivisores = new System.Windows.Forms.Label();
 			this.tbxTotalDivisores = new System.Windows.Forms.TextBox();
-			this.groupBox1.SuspendLayout();
+			this.gbxListaDivisores.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// lblNumero
@@ -75,15 +75,14 @@
 			this.btnCalcular.UseVisualStyleBackColor = true;
 			this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
 			// 
-			// groupBox1
+			// gbxListaDivisores
 			// 
-			this.groupBox1.Controls.Add(this.lbxDivisores);
-			this.groupBox1.Location = new System.Drawing.Point(12, 127);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(359, 277);
-			this.groupBox1.TabIndex = 4;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Lista de divisores";
+			this.gbxListaDivisores.Controls.Add(this.lbxDivisores);
+			this.gbxListaDivisores.Location = new System.Drawing.Point(12, 127);
+			this.gbxListaDivisores.Name = "gbxListaDivisores";
+			this.gbxListaDivisores.Size = new System.Drawing.Size(359, 277);
+			this.gbxListaDivisores.TabIndex = 4;
+			this.gbxListaDivisores.TabStop = false;
 			// 
 			// lbxDivisores
 			// 
@@ -118,7 +117,7 @@
 			this.ClientSize = new System.Drawing.Size(383, 444);
 			this.Controls.Add(this.tbxTotalDivisores);
 			this.Controls.Add(this.lblTotalDivisores);
-			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.gbxListaDivisores);
 			this.Controls.Add(this.btnCalcular);
 			this.Controls.Add(this.cbxListarSomentePrimos);
 			this.Controls.Add(this.txtNumero);
@@ -127,7 +126,7 @@
 			this.Name = "Principal";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Calculo de divisores";
-			this.groupBox1.ResumeLayout(false);
+			this.gbxListaDivisores.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -139,7 +138,7 @@
 		private System.Windows.Forms.TextBox txtNumero;
 		private System.Windows.Forms.CheckBox cbxListarSomentePrimos;
 		private System.Windows.Forms.Button btnCalcular;
-		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.GroupBox gbxListaDivisores;
 		private System.Windows.Forms.ListBox lbxDivisores;
 		private System.Windows.Forms.Label lblTotalDivisores;
 		private System.Windows.Forms.TextBox tbxTotalDivisores;
