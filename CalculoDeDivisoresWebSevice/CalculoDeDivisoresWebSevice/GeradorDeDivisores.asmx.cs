@@ -1,8 +1,6 @@
 ﻿using CalculoDeDivisores;
+using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Services;
 
 namespace CalculoDeDivisoresWebSevice
@@ -19,15 +17,65 @@ namespace CalculoDeDivisoresWebSevice
 	{
 
 		[WebMethod]
-		public int[] ObterDivisoresDeUmNumero(int numero)
+		public string ObterDivisoresDeUmNumero(string numero)
 		{
-			return GeracaoDeDivisoresUtil.ObterDivisoresDoNumero(numero, apenasDivisoresPrimos:false).ToArray();
+			try
+			{
+				var numeroTratado = TratarNumeroPreenchido(numero);
+
+				ValidarPreenchimentoDaRequisicao(numeroTratado);
+
+				var decomposicao = GeracaoDeDivisoresUtil.ObterDivisoresDoNumero(numeroTratado.Value, apenasDivisoresPrimos: false).ToArray();
+				
+				return JsonConvert.SerializeObject(decomposicao);
+			}
+			catch(Exception ex)
+			{
+				return ex.Message;
+			}
 		}
 
 		[WebMethod]
-		public int[] ObterDivisoresPrimosDeUmNumero(int numero)
+		public string ObterDivisoresPrimosDeUmNumero(string numero)
 		{
-			return GeracaoDeDivisoresUtil.ObterDivisoresDoNumero(numero, apenasDivisoresPrimos: true).ToArray();
+			try
+			{
+				var numeroTratado = TratarNumeroPreenchido(numero);
+
+				ValidarPreenchimentoDaRequisicao(numeroTratado);
+
+				var decomposicao = GeracaoDeDivisoresUtil.ObterDivisoresDoNumero(numeroTratado.Value, apenasDivisoresPrimos: true).ToArray();
+
+				return JsonConvert.SerializeObject(decomposicao);
+			}
+			catch (Exception ex)
+			{
+				return ex.Message;
+			}
+		}
+
+		private void ValidarPreenchimentoDaRequisicao(int? numero)
+		{
+			bool preenchimentoValido = (numero.HasValue && (numero >= 2));
+
+			if (!preenchimentoValido)
+				throw new Exception("O usuário deverá informar um número inteiro positivo a partir de 2.");
+		}
+
+		private int? TratarNumeroPreenchido(string numeroPreenchido)
+		{
+			var valorPreenchido = numeroPreenchido.Trim();
+			int numeroTratado;
+
+			if (ValorPreenchidoEhValido(valorPreenchido, out numeroTratado))
+				return numeroTratado;
+
+			return null;
+		}
+
+		private static bool ValorPreenchidoEhValido(string textoNumero, out int numeroPreenchido)
+		{
+			return int.TryParse(textoNumero, out numeroPreenchido);
 		}
 	}
 }

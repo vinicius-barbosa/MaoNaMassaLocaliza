@@ -58,3 +58,5 @@ D:\Projetos\MaoNaMassaLocaliza\CalculoDeDivisoresWebSevice\CalculoDeDivisoresWeb
 D:\Projetos\MaoNaMassaLocaliza\CalculoDeDivisoresWebSevice\CalculoDeDivisoresWebSevice\obj\Debug\CalculoDeDivisoresWebSevice.pdb
 D:\Projetos\MaoNaMassaLocaliza\CalculoDeDivisoresWebSevice\CalculoDeDivisoresWebSevice\bin\CalculoDeDivisores.dll
 D:\Projetos\MaoNaMassaLocaliza\CalculoDeDivisoresWebSevice\CalculoDeDivisoresWebSevice\bin\CalculoDeDivisores.pdb
+D:\Projetos\MaoNaMassaLocaliza\CalculoDeDivisoresWebSevice\CalculoDeDivisoresWebSevice\bin\Newtonsoft.Json.dll
+D:\Projetos\MaoNaMassaLocaliza\CalculoDeDivisoresWebSevice\CalculoDeDivisoresWebSevice\bin\Newtonsoft.Json.xml
