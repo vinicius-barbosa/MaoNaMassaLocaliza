@@ -39,6 +39,8 @@ namespace CalculoDeDivisoresClient
 			}
 		}
 
+		private List<int> Divisores;
+
 		#endregion
 
 		#region Métodos utilitários
@@ -60,20 +62,31 @@ namespace CalculoDeDivisoresClient
 		{
 			DeveListarSomentePrimos = false;
 			Numero = null;
+
+			lbxDivisores.DataSource = null;
+			tbxTotalDivisores.Text = string.Empty;
+
+			AjustarTituloDoAgrupamento(limpar: true);
 		}
 
 		private void ProcessarPreenchimentoDeDivisoresNoFormulario()
 		{
-			List<int> divisoresObtidos = GeracaoDeDivisoresUtil.ObterDivisoresDoNumero(Numero.Value, DeveListarSomentePrimos);
-
-			lbxDivisores.DataSource = divisoresObtidos;
-			tbxTotalDivisores.Text = divisoresObtidos.Count.ToString();
+			Divisores = GeracaoDeDivisoresUtil.ObterDivisoresDoNumero(Numero.Value, DeveListarSomentePrimos);
 			
-			AjustarTituloDoAgrupamento(divisoresObtidos); 
+			lbxDivisores.DataSource = Divisores;
+			tbxTotalDivisores.Text = Divisores.Count.ToString();
+			
+			AjustarTituloDoAgrupamento(); 
 		}
 
-		private void AjustarTituloDoAgrupamento(List<int> divisoresObtidos)
+		private void AjustarTituloDoAgrupamento(bool limpar = false)
 		{
+			if (limpar)
+			{
+				gbxListaDivisores.Text = string.Empty;
+				return;
+			}
+
 			string textoTitulo = "Lista de divisores {0} de {1}";
 			string detalheDaListagem = DeveListarSomentePrimos ? "primos" : string.Empty;
 
@@ -100,10 +113,11 @@ namespace CalculoDeDivisoresClient
 			{
 				MessageBox.Show(ex.Message, "Aviso");
 			}
-			finally
-			{
-				LimparControles();
-			}
+		}
+
+		private void btnLimparControles_Click(object sender, EventArgs e)
+		{
+			LimparControles();
 		}
 
 		#endregion

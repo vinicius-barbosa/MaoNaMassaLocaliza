@@ -36,6 +36,7 @@
 			this.lbxDivisores = new System.Windows.Forms.ListBox();
 			this.lblTotalDivisores = new System.Windows.Forms.Label();
 			this.tbxTotalDivisores = new System.Windows.Forms.TextBox();
+			this.btnLimparControles = new System.Windows.Forms.Button();
 			this.gbxListaDivisores.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -67,9 +68,9 @@
 			// 
 			// btnCalcular
 			// 
-			this.btnCalcular.Location = new System.Drawing.Point(109, 87);
+			this.btnCalcular.Location = new System.Drawing.Point(12, 91);
 			this.btnCalcular.Name = "btnCalcular";
-			this.btnCalcular.Size = new System.Drawing.Size(176, 30);
+			this.btnCalcular.Size = new System.Drawing.Size(359, 30);
 			this.btnCalcular.TabIndex = 3;
 			this.btnCalcular.Text = "Calcular";
 			this.btnCalcular.UseVisualStyleBackColor = true;
@@ -78,7 +79,7 @@
 			// gbxListaDivisores
 			// 
 			this.gbxListaDivisores.Controls.Add(this.lbxDivisores);
-			this.gbxListaDivisores.Location = new System.Drawing.Point(12, 127);
+			this.gbxListaDivisores.Location = new System.Drawing.Point(12, 167);
 			this.gbxListaDivisores.Name = "gbxListaDivisores";
 			this.gbxListaDivisores.Size = new System.Drawing.Size(359, 277);
 			this.gbxListaDivisores.TabIndex = 4;
@@ -96,7 +97,7 @@
 			// lblTotalDivisores
 			// 
 			this.lblTotalDivisores.AutoSize = true;
-			this.lblTotalDivisores.Location = new System.Drawing.Point(184, 416);
+			this.lblTotalDivisores.Location = new System.Drawing.Point(184, 456);
 			this.lblTotalDivisores.Name = "lblTotalDivisores";
 			this.lblTotalDivisores.Size = new System.Drawing.Size(128, 17);
 			this.lblTotalDivisores.TabIndex = 5;
@@ -105,16 +106,27 @@
 			// tbxTotalDivisores
 			// 
 			this.tbxTotalDivisores.Enabled = false;
-			this.tbxTotalDivisores.Location = new System.Drawing.Point(315, 412);
+			this.tbxTotalDivisores.Location = new System.Drawing.Point(315, 452);
 			this.tbxTotalDivisores.Name = "tbxTotalDivisores";
 			this.tbxTotalDivisores.Size = new System.Drawing.Size(56, 22);
 			this.tbxTotalDivisores.TabIndex = 6;
+			// 
+			// btnLimparControles
+			// 
+			this.btnLimparControles.Location = new System.Drawing.Point(12, 127);
+			this.btnLimparControles.Name = "btnLimparControles";
+			this.btnLimparControles.Size = new System.Drawing.Size(359, 30);
+			this.btnLimparControles.TabIndex = 7;
+			this.btnLimparControles.Text = "Limpar Controles";
+			this.btnLimparControles.UseVisualStyleBackColor = true;
+			this.btnLimparControles.Click += new System.EventHandler(this.btnLimparControles_Click);
 			// 
 			// Principal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(383, 444);
+			this.ClientSize = new System.Drawing.Size(383, 486);
+			this.Controls.Add(this.btnLimparControles);
 			this.Controls.Add(this.tbxTotalDivisores);
 			this.Controls.Add(this.lblTotalDivisores);
 			this.Controls.Add(this.gbxListaDivisores);
@@ -122,10 +134,11 @@
 			this.Controls.Add(this.cbxListarSomentePrimos);
 			this.Controls.Add(this.txtNumero);
 			this.Controls.Add(this.lblNumero);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.Name = "Principal";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Calculo de divisores";
+			this.Text = "Cálculo de divisores";
 			this.gbxListaDivisores.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -142,6 +155,7 @@
 		private System.Windows.Forms.ListBox lbxDivisores;
 		private System.Windows.Forms.Label lblTotalDivisores;
 		private System.Windows.Forms.TextBox tbxTotalDivisores;
+		private System.Windows.Forms.Button btnLimparControles;
 	}
 }
 
