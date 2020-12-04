@@ -21,13 +21,7 @@ namespace CalculoDeDivisoresWebSevice
 		{
 			try
 			{
-				var numeroTratado = TratarNumeroPreenchido(numero);
-
-				ValidarPreenchimentoDaRequisicao(numeroTratado);
-
-				var decomposicao = GeracaoDeDivisoresUtil.ObterDivisoresDoNumero(numeroTratado.Value, apenasDivisoresPrimos: false).ToArray();
-				
-				return JsonConvert.SerializeObject(decomposicao);
+				return ProcessarRequisicao(numero, apenasDivisoresPrimos: false);
 			}
 			catch(Exception ex)
 			{
@@ -40,18 +34,23 @@ namespace CalculoDeDivisoresWebSevice
 		{
 			try
 			{
-				var numeroTratado = TratarNumeroPreenchido(numero);
-
-				ValidarPreenchimentoDaRequisicao(numeroTratado);
-
-				var decomposicao = GeracaoDeDivisoresUtil.ObterDivisoresDoNumero(numeroTratado.Value, apenasDivisoresPrimos: true).ToArray();
-
-				return JsonConvert.SerializeObject(decomposicao);
+				return ProcessarRequisicao(numero, apenasDivisoresPrimos: true);
 			}
 			catch (Exception ex)
 			{
 				return ex.Message;
 			}
+		}
+
+		private string ProcessarRequisicao(string numero, bool apenasDivisoresPrimos)
+		{
+			var numeroTratado = TratarNumeroPreenchido(numero);
+
+			ValidarPreenchimentoDaRequisicao(numeroTratado);
+
+			var decomposicao = GeracaoDeDivisoresUtil.ObterDivisoresDoNumero(numeroTratado.Value, apenasDivisoresPrimos: apenasDivisoresPrimos).ToArray();
+
+			return JsonConvert.SerializeObject(decomposicao);
 		}
 
 		private void ValidarPreenchimentoDaRequisicao(int? numero)
