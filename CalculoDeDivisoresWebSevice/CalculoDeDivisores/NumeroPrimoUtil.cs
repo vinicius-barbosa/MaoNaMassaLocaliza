@@ -6,7 +6,7 @@ namespace CalculoDeDivisores
 	{
 		public static bool NumeroEhPrimo(int numero, int divisorParaRecursividade)
 		{
-			if (numero == 1)
+			if (Array.IndexOf(new int[] { 0, 1 }, numero) >= 0)
 			{
 				return false;
 			}

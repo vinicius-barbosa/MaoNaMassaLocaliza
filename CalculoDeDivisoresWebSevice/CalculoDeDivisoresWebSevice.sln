@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculoDeDivisores", "Calcu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculoDeDivisoresClient", "CalculoDeDivisoresClient\CalculoDeDivisoresClient.csproj", "{71899560-5A73-46ED-8986-4D87F70D794D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculoDeDivisores.Test", "CalculoDeDivisores.Test\CalculoDeDivisores.Test.csproj", "{B76BEB60-EC4D-4C47-9251-3034987C78D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{71899560-5A73-46ED-8986-4D87F70D794D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71899560-5A73-46ED-8986-4D87F70D794D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71899560-5A73-46ED-8986-4D87F70D794D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B76BEB60-EC4D-4C47-9251-3034987C78D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B76BEB60-EC4D-4C47-9251-3034987C78D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B76BEB60-EC4D-4C47-9251-3034987C78D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B76BEB60-EC4D-4C47-9251-3034987C78D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
